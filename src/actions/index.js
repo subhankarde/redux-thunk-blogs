@@ -2,7 +2,7 @@ import _ from 'lodash';
 import jsonPlaceholder from '../apis/jsonPlaceholder';
 
 export const fetchPostsAndUsers = () => async (dispatch, getState) => {
-    await dispatch(fetchPosts());
+    await dispatch(fetchPosts());//Manually dispatching the Action creator
 
     _.chain(getState().posts)
         .map('userId')
